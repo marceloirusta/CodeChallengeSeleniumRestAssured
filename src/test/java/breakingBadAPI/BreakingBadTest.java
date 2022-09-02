@@ -41,6 +41,9 @@ public class BreakingBadTest {
     public void printAllCharacters() throws UnsupportedEncodingException {
 
         for (int i = 1; i< 63; i ++){
+            if(i > 57 && i < 112){
+                continue;
+            }
             String url = "https://www.breakingbadapi.com/api/characters/"+i;
             String resultURL = java.net.URLDecoder.decode(url, "UTF-8");
 
